@@ -1,11 +1,11 @@
 {
-    "name": "quarterloop/laravel-dashboard-uptime-tile",
-    "description": "A Uptime tile for the Laravel Dashboard",
+    "name": "quarterloop/laravel-dashboard-ttfb-tile",
+    "description": "A Total Time to First Byte for the Laravel Dashboard",
     "keywords": [
         "quarterloop",
-        "laravel-dashboard-uptime-tile"
+        "laravel-dashboard-ttfb-tile"
     ],
-    "homepage": "https://github.com/quarterloop/laravel-dashboard-uptime-tile",
+    "homepage": "https://github.com/quarterloop/laravel-dashboard-ttfb-tile",
     "license": "MIT",
     "authors": [
         {
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Quarterloop\\UptimeTile\\": "src"
+            "Quarterloop\\TTFBTile\\": "src"
         }
     },
     "scripts": {
@@ -36,7 +36,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Quarterloop\\UptimeTile\\UptimeTileServiceProvider"
+                "Quarterloop\\TTFBTile\\TTFBTileServiceProvider"
             ]
         }
     },
