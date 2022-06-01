@@ -7,17 +7,19 @@
           </svg>
         </a>
 
-        <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide tabular-nums text-center">TTFB</h1>
+        <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide tabular-nums text-center">Total Time First Byte</h1>
         <p class="text-dimmed lowercase tracking-wide tabular-nums text-center mr-auto ml-auto mb-3 w-full"
            style="font-size: 12px;">
            {{ $lastUpdateDate }} - {{ $lastUpdateTime }}
         </p>
 
-        <div class="flex flex-row justify-between">
-            <div class="flex flex-col w-1/3">
-                <div class="font-small text-xs text-center"></div>
-                <div class="font-small text-xs text-center"></div>
+        <div class="flex flex-row flex-wrap justify-between">
+          @foreach($ttfbs as $ttfb)
+            <div class="flex flex-col w-1/3 min-w-min">
+                <div class="font-small text-xs text-center mb-1">{{ $ttfb['ttfb'] }} ms</div>
+                <div class="font-small text-xs text-center">{{ $ttfb['country'] }}</div>
             </div>
+          @endforeach
         </div>
 
     </div>

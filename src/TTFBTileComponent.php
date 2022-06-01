@@ -23,7 +23,7 @@ class TTFBTileComponent extends Component
 
         return view('dashboard-ttfb-tile::tile', [
             'website'         => config('dashboard.tiles.hosting.url'),
-
+            'ttfbs'            => $ttfbStore->getData()['data'],
             'lastUpdateTime'  => date('H:i:s', strtotime($ttfbStore->getLastUpdateTime())),
             'lastUpdateDate'  => date('d.m.Y', strtotime($ttfbStore->getLastUpdateDate())),
         ]);
