@@ -15,8 +15,8 @@
 
         <div class="flex flex-row flex-wrap justify-between">
           @foreach($ttfbs as $ttfb)
-            <div class="flex flex-col w-1/3 min-w-min">
-                <div class="font-small text-xs text-center mb-1">{{ $ttfb['ttfb'] }} ms</div>
+            <div class="flex flex-col min-w-min p-1 border border-white border-dimmed rounded" style="width: calc(100% / 3 - 1em)">
+                <div class="font-small text-xs text-center mb-3">{{ $ttfb['ttfb'] }} ms</div>
                 <div class="font-small text-xs text-center">{{ $ttfb['country'] }}</div>
             </div>
           @endforeach
