@@ -5,6 +5,7 @@ namespace Quarterloop\TTFBTile\Commands;
 use Illuminate\Console\Command;
 use Quarterloop\TTFBTile\Services\TTFBAPI;
 use Quarterloop\TTFBTile\TTFBStore;
+use Session;
 
 class FetchTTFBCommand extends Command
 {
@@ -18,7 +19,7 @@ class FetchTTFBCommand extends Command
         $this->info('Fetching total time first byte ...');
 
         $ttfb = $ttfb_api::getUptime(
-            config('dashboard.tiles.hosting.url'),
+            Session::get('website'),
             config('dashboard.tiles.geekflare.key'),
         );
 
