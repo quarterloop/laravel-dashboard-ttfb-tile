@@ -13,11 +13,11 @@
            {{ $lastUpdateDate }} - {{ $lastUpdateTime }}
         </p>
 
-        <div class="flex flex-row justify-between pb-1">
+        <div class="flex flex-row justify-center pb-1">
           <div class="w-3/12 p-1 text-xs text-center rounded
-                      @if( $ttfb <= 100 ) bg-yellow-700  @endif
-                      @if( $ttfb >= 100 ) bg-red-700     @endif
-                      @if( $ttfb <= 50 )  bg-green-700   @endif">{{ $ttfb }} ms</div>
+                      @if( $ttfb['data'] <= 100 ) bg-yellow-700  @endif
+                      @if( $ttfb['data'] >= 100 ) bg-red-700     @endif
+                      @if( $ttfb['data'] <= 50 )  bg-green-700   @endif">{{ $ttfb['data'] }} ms</div>
         </div>
 
     </div>
