@@ -12,8 +12,7 @@ class TTFBAPI
       $response = Http::withHeaders([
         'x-api-key' => $key,
       ])->post('https://api.geekflare.com/ttfb', [
-        'url' => $url,
-        'locations' => [ "uk", "us", "sg" ],
+        'url' => $url
       ])->json();
 
       return $response;
